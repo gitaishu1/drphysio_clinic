@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title> DRP Clinic</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+
+    <body>
+    <!-- Image before the title -->
+    <img src="{% static 'img/image 11.png' %}" alt="Dr Physio Logo">
+    <h1 style="font-size:36px; font-family: Century Gothic;color:darkblue; "><strong>DEFINE REHAB PHYSIO</strong></h1>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="#" class="text-light me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
+                        <a href="#" class="text-light me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+91 8891260999</a>
+                        <a href="#" class="text-light me-0"><i class="fas fa-envelope text-primary me-2"></i>drphysio5272@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+
+                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="text-primary m-0" style="font-size:36px; font-family: Century Gothic;"><i class="fas  me-3"></i><strong>DR PHYSIO - ADVANCED PHYSIOTHERAPY CLINIC</strong></h1>
+                                     </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                 <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
+                        <a href="{% url 'appointmentinsert' %}" class="nav-item nav-link">Appointment</a>
+                        <a href="{% url 'blog' %}" class="nav-item nav-link">Gallery</a>
+                        <a href="{% url 'testimonial' %}" class="nav-item nav-link">Testimonials</a>
+                        <a href="{% url 'contact' %}" class="nav-item nav-link">Contact Us</a>
+                        <a href="https://wa.me/8891260999" target="_blank" class="nav-item nav-link" style="color: #25D366 !important;"></a>
+                            <a href="https://wa.me/8891260999?text=Hi%20there%2C%20I%20need%20help%20with%20..." target="_blank" class="nav-item nav-link">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+                       </a>
+                    </div>
+                 </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+
+<!-- Header Start -->
+    <img src="{% static 'img/dr_physio.jpg' %}" alt="Dr Physio Logo">
+        <!-- Header End -->
+
+
+{% block content %}
+    <!-- About Start -->
+        <div class="container-fluid about bg-light py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="about-img pb-5 ps-5">
+                            <img src="{% static 'img/about-1.jpg' %}" class="img-fluid rounded w-100" style="object-fit: cover;" alt="Image">
+                            <div class="about-img-inner">
+                                <img src="{% static 'img/about-2.jpg' %}" class="img-fluid rounded-circle w-100 h-100" alt="Image">
+                            </div>
+                            <div class="about-experience" >17 years experience</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.4s">
+                        <div class="section-title text-start mb-5">
+                            <h4 class="sub-title pe-3 mb-0" style=" font-size:30px; font-family: Century Gothic;">About Us</h4>
+                            <h1 class="display-3 mb-4" style=" font-size:36px; font-family: Century Gothic;text-align: justify;">We are Ready to Help Improve Your Treatment.</h1>
+                            <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;text-align: justify;">
+
+At DR PHYSIO, we are dedicated to helping you reclaim your strength, mobility, and overall well-being. Our newly opened clinic is a sanctuary where healing begins, and our team of experienced physiotherapists is here to support you every step of the way. With a team of dedicated and experienced physiotherapists, state-of-the-art facilities, and a patient-centered approach, we are committed to providing the highest quality care to our community.
+</p>
+                            <div class="mb-4">
+                                <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Refresing to get such a personal touch.</p>
+                            </div>
+                            <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Team Start -->
+        <div class="container-fluid team py-5">
+            <div class="container py-5">
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="sub-style">
+                        <h4 class="sub-title px-3 mb-0" style=" font-size:36px; font-family: Century Gothic;">Meet our team</h4>
+                    </div>
+                    <h1 class="display-3 mb-4" style=" font-size:40px; font-family: Century Gothic;">Physiotherapy Services from Professional Therapist</h1>
+
+
+                    <p class="mb-0" style=" font-size:16px; font-family: Century Gothic;text-align: justify;">•Dr. Manjesh Sukumaran, PT : Highly experienced physiotherapist with 17 years (International experience) of dedicated service in the field of physical therapy. He has a strong background in Orthopedic rehabilitation, Sports injury, Post-Surgery Rehab, Neuro Rehab, and Chronic pain management. Known for his patient-centered approach, combining manual therapy techniques with advanced rehabilitation protocols to achieve optimal patient outcomes. With over 17 years of experience, he is passionate about empowering his patients to achieve their optimal physical health.</p>
+
+                    <p class="mb-0" style=" font-size:16px; font-family: Century Gothic;text-align: justify;">•Dr.  Maria K John, PT : With a focus on chronic pain management, specializing in women's health and pre/postnatal care typically possess specialized training and expertise in addressing the unique musculoskeletal and physiological needs of women during pregnancy, childbirth, and the postpartum period.
+She specializes in Musculoskeletal physiotherapy, Paediatric and Geriatric Care. Known for her empathetic approach and evidence-based treatment plans, she is committed to improving her patients' quality of life and helping them achieve their rehabilitation goals.
+</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item rounded">
+                            <div class="team-img rounded-top h-150">
+                                <img src="img/team-1.jpg" class="img-fluid rounded-top w-150" alt="">
+                                <div class="team-icon d-flex justify-content-center">
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                           <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4 mb-4">
+
+                                <h5 style=" font-size:20px; font-family: Century Gothic;">Dr.MANJESH SUKUMARAN, PT</h5>
+                                <img src="{% static 'img/Dr.Manjesh.png' %}" alt="Dr. Manjesh - Dr Physio Logo">
+                                <p class="mb-0" style=" font-size:20px; font-family: Century Gothic;">DIRECTOR & CHEIF PHYSIOTHERAPIST</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item rounded">
+                            <div class="team-img rounded-top h-100">
+                                <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <div class="team-icon d-flex justify-content-center">
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                                <h5 style=" font-size:20px; font-family: Century Gothic;">Dr.MARIA K JOHN, PT</h5>
+                                <img src="{% static 'img/Dr.Maria Sudeep.jpg' %}" alt="Dr. Maria - Dr Physio Logo">
+                                <p class="mb-0" style=" font-size:20px; font-family: Century Gothic;">PHYSIOTHERAPIST</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+
+        <!-- Services Start -->
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="sub-style">
+                        <h4 class="sub-title px-3 mb-0" style="font-size:36px; font-family: Century Gothic;">What We Do</h4>
+                    </div>
+                    <h1 class="display-3 mb-4" style="font-size:36px; font-family: Century Gothic;">DEFINE REHAB</h1>
+                    <h2 class="display-3 mb-4" style="font-size:36px; font-family: Century Gothic;">Top-Rated Physiotherapy by Certified Experts</h2>
+                    <p class="mb-0" style="font-size:20px; font-family: Century Gothic;text-align: justify;"> ♦ Personalized Treatment Plans: We believe in a holistic approach to physiotherapy, tailoring our treatments to suit your individual needs and goals.
+ <p style="font-family: 'Century Gothic'; font-size: 20px;text-align: justify;">♦Sports Injury Rehabilitation: Whether you're a weekend warrior or a professional athlete, our team is here to help you get back in the game.</P>
+
+ <p style="font-family: 'Century Gothic'; font-size: 20px;text-align: justify;">♦Chronic Pain Management: Living with chronic pain can be challenging, but our dedicated physiotherapists will work with you to find solutions that improve your quality of life.</P>
+
+ <p style="font-family: 'Century Gothic'; font-size: 20px;text-align: justify;">♦Post-Surgical Rehabilitation: Recovering from surgery can be tough, but with our specialized rehabilitation programs, we'll help you regain strength and mobility.</P>
+
+<p style="font-family: 'Century Gothic'; font-size: 20px; text-align: justify;">♦Geriatric Physiotherapy</p>
+<p style="font-family: 'Century Gothic'; font-size: 20px; text-align: justify;">♦Neurological Rehabilitation</p>
+<p style="font-family: 'Century Gothic'; font-size: 20px; text-align: justify;">♦Specializing in women's health, Pre/Postnatal Care</p>
+<p style="font-family: 'Century Gothic'; font-size: 20px; text-align: justify;">♦Musculoskeletal Physiotherapy</p>
+<p style="font-family: 'Century Gothic'; font-size: 20px; text-align: justify;">♦Sports Injury Rehabilitation</p>
+<p style="font-family: 'Century Gothic'; font-size: 20px; text-align: justify;">♦Chronic Pain Management</p>
+<p style="font-family: 'Century Gothic'; font-size: 20px; text-align: justify;">♦Manual Therapy</p>
+<p style="font-family: 'Century Gothic'; font-size: 20px; text-align: justify;">♦Exercise Prescription and Rehabilitation</p>
+
+
+                </div>
+                 <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded">
+                            <div class="service-img rounded-top">
+                                <img src="{% static 'img/sportsimg1.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Sports Physiotherapy</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Sports physiotherapy helps accelerate healing by improving mobility, reducing pain, and restoring strength after injuries. </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/psrimg.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Post-Surgical Rehabilitation</h5>
+                                    <p class="mb-4" style=" font-size:16x; font-family: Century Gothic;">Post-surgical rehabilitation is a crucial process after surgery, focusing on restoring function, reducing pain, and promoting healing through physical therapy, targeted exercises, and other interventions to aid in a safe and complete recovery. </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/hotcoldimg.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Heat & Cold Therapy</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Heat and cold therapy, or thermotherapy and cryotherapy, are common pain management techniques that utilize temperature changes to alleviate pain and inflammation by promoting blood flow and muscle relaxation or reducing swelling. </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/12.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Neurological Physiotherapy</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Neurological physiotherapy focuses on assessing and treating conditions affecting the nerves of the brain or body. </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/stroke rehab.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Stroke Rehabilitation</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Stroke rehabilitation is a program of therapies designed to help individuals relearn skills lost due to a stroke, focusing on restoring function and improving quality of life. </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/Copy.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Spinal Cord Injury Management</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;"> Spinal cord injury treatment focuses on preventing further injury and empowering people to return to an active and productive life. </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/orthopedic physiotherapy.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Orthopedic Physiotherapy</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Orthopedic physiotherapy focuses on the assessment, treatment, and management of conditions affecting the musculoskeletal system (bones, muscles, joints, ligaments, and tendons) to restore optimal function and improve mobility and quality of life. </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/fracture rehab.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Fracture Rehabilitation</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Fracture rehabilitation in physiotherapy focuses on restoring function and preventing complications after a bone break, encompassing pain management, regaining range of motion, and strengthening muscles, often in a phased approach.  </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/arthritis.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Arthritis Management</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Physiotherapy plays a crucial role in managing arthritis by addressing pain, improving mobility, and enhancing function through exercises, manual therapy, modalities like heat/cold, and patient education.  </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/Cardiorespiratory Physiotherapy.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Cardiorespiratory Physiotherapy</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Cardiorespiratory physiotherapy is a specialized area of physiotherapy focused on assessing and treating individuals with conditions affecting the cardiovascular (heart) and respiratory (lungs) systems, aiming to improve breathing, endurance, and overall health.   </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/pulmonary.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Pulmonary Disease Physiotherapy</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Pulmonary disease physiotherapy, also known as pulmonary rehabilitation, is a supervised program that helps individuals with lung diseases improve their breathing and overall quality of life through exercises, breathing techniques, and education.   </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/post heart.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Post-Heart SUrgery Rehab</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Post-heart surgery physiotherapy, or cardiac rehabilitation, focuses on restoring function and improving cardiovascular health through a structured program of exercises, education, and lifestyle modifications, guided by a physiotherapist.    </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/pediatric.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Pediatric Physiotherapy</h5>
+                                    <p class="mb-4"  style=" font-size:16px; font-family: Century Gothic;">Pediatric physiotherapy, a specialized area of physiotherapy, focuses on treating movement and movement-related disorders in children from birth to 18 years, aiming to improve physical function, quality of life, and independence.     </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/geriatric Therapy.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Geriatric Physiotherapy</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Geriatric physiotherapy focuses on optimizing function and quality of life for older adults through tailored exercise programs, manual therapy, and education on safe movement techniques, aiming to improve mobility, reduce pain, and enhance overall physical function.    </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/ini.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Initial Assessment and Consultation</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">During an initial physiotherapy assessment and consultation, a physiotherapist evaluates your physical abilities, limitations, and medical history to develop a tailored treatment plan addressing your specific needs and goals.     </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/22.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Follow-up Treatments</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Follow-up physiotherapy treatments are crucial for maintaining progress, preventing relapses, and ensuring long-term recovery, often involving exercises, manual therapy, and other modalities tailored to individual needs.    </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/pregnancy.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4"  style=" font-size:20px; font-family: Century Gothic;">Pregnancy-Related Pain Management</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Physiotherapy plays a crucial role in managing pregnancy-related pain, addressing issues like low back pain and pelvic girdle pain through techniques like posture correction, exercises, and manual therapy, aiming to improve mobility, reduce pain, and prepare for labor.    </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/post partum.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Postpartum Rehabilitation</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Postpartum rehabilitation physiotherapy aims to help women recover from childbirth, addressing physical changes and potential issues like pelvic floor weakness, diastasis recti, and back pain through exercises and guidance.    </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/womens health physiotherapy.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Women's Health Physiotherapy</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Women's health physiotherapy focuses on addressing a wide range of physical issues specific to women, including pelvic floor dysfunction, incontinence, prenatal and postnatal care, and rehabilitation after gynecological procedures.     </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/mens health physiotherapy.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Mens Health Physiotherapy</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Men's health physiotherapy is a specialized area of physiotherapy that focuses on treating male-specific health issues, particularly those related to pelvic health, including pelvic pain, incontinence, and sexual dysfunction, while also addressing related mental health and wellbeing.      </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/pelvic floor therapy.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Pelvic Floor Dysfunction</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">In physiotherapy, pelvic floor dysfunction (PFD) refers to issues with the muscles, ligaments, and tissues that support the pelvic organs, leading to problems like incontinence, pelvic pain, or sexual dysfunction, which physiotherapists address through specialized interventions.      </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/dry needle.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Dry Needling</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Dry needling is a physiotherapy technique where a thin, solid needle is inserted into the skin and muscle to stimulate trigger points, which are hyperirritable spots that can cause pain and limited movement, aiming to reduce muscle tightness and pain.      </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/Cupping.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Dry Cupping</h5>
+                                    <p class="mb-4"  style=" font-size:16px; font-family: Century Gothic;">Dry cupping physiotherapy involves a physical therapist using cups to create suction on the skin, aiming to increase blood flow, reduce pain, and improve tissue mobility, often used for musculoskeletal issues.       </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/Postural Evaluation.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Posture Correction</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Postural evaluation is a systematic assessment of a person's body alignment and balance, helping identify deviations and their potential impact on the musculoskeletal system.       </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/manual therapy.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Manual Therapy</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Manual therapies are hands-on techniques used by therapists to treat musculoskeletal pain and improve function, including techniques like joint mobilization and soft tissue mobilization.      </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/exercises.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Exercise Therapy</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Exercise therapy, also known as therapeutic exercise, which involves carefully prescribed physical activities to restore function, reduce pain, and improve overall well-being after injury or illness.        </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/strength.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Strengthening Exercises</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Strengthening exercises, also known as resistance training, aim to increase muscle strength by making muscles work against a weight or force, and can be done with body weight, free weights, resistance bands, or machines.        </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/mini gym.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Mini Gym</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">A "mini gym" refers to a smaller, more compact fitness space, often located within a home or small business, that provides workout equipment and a focused fitness experience.       </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/electrotherapy.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Electrotherapy</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Electrotherapy is a medical treatment that utilizes electrical energy to address a variety of conditions.      </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/ultrasound.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Ultrasound Therapy</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Ultrasound therapy is a physical therapy technique using high-frequency sound waves to promote healing and reduce pain in soft tissues.      </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/cpm.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Continuous Passive Movement</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Continuous Passive Motion (CPM) therapy, used in physiotherapy, employs a motorized device to move a joint passively and repetitively through a controlled range of motion      </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/ergonic.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Ergonomic Assessments</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Ergonomic assessments in physiotherapy involve evaluating a person's work environment to ensure it's safe and comfortable, reducing the risk of musculoskeletal injuries.     </p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/Spinal traction.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Spinal traction</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Spinal traction in physiotherapy is a therapeutic technique that uses controlled pulling forces to separate vertebrae and reduce pressure on nerves and discs, primarily to relieve pain and improve mobility in the spine.</p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/stretching.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Flexibility and Stretching Exercises</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Flexibility and stretching exercises are crucial in physiotherapy to improve range of motion, reduce stiffness, and enhance overall function.</p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="{% static 'img/balance.jpg' %}" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" style=" font-size:20px; font-family: Century Gothic;">Balance and Coordination Training</h5>
+                                    <p class="mb-4" style=" font-size:16px; font-family: Century Gothic;">Balance and coordination training in physiotherapy focuses on improving an individual's ability to maintain equilibrium and perform coordinated movements.</p>
+                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+            </div>
+        </div>
+        <!-- Services End -->
+
+            <!-- Blog Start -->
+        <div class="container-fluid blog py-5">
+            <div class="container py-5">
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="sub-style">
+                        <h4 class="sub-title px-3 mb-0" style="font-family: 'Century Gothic'; font-size: 40px; text-align: center;">OUR CLINIC</h4>
+                    </div>
+                    <h1 class="display-3 mb-4" style="font-family: 'Century Gothic'; font-size: 36px; text-align: center;">Excellent Facility and High Quality Therapy</h1>
+                    <p style="font-family: 'Century Gothic'; font-size: 20px;text-align: center;">♦Located in a serene setting,
+                our clinic offers a calming environment where you can focus on your healing journey.</p>
+                    <img src="{% static 'img/main1.jpg' %}" class="img-fluid w-100 mb-3" alt="Image">
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="blog-item rounded">
+                            <div class="blog-img">
+                                <img src="{% static 'img/pic1.jpg' %}" class="img-fluid w-100 mb-3" alt="Image">
+                                <img src="{% static 'img/pic6.jpg' %}" class="img-fluid w-100 mb-3 " alt="Image">
+                                <img src="{% static 'img/pic9.jpg' %}" class="img-fluid w-100 " alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="blog-item rounded">
+                            <div class="blog-img">
+                                <img src="{% static 'img/pic2.jpg' %}" class="img-fluid w-100 mb-3" alt="Image">
+                                <img src="{% static 'img/pic3.jpg' %}" class="img-fluid w-100 mb-3" alt="Image">
+                                <img src="{% static 'img/pic7.jpg' %}" class="img-fluid w-100 mb-3" alt="Image">
+                                <img src="{% static 'img/pic10.jpg' %}" class="img-fluid w-100 mb-3" alt="Image">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="blog-item rounded">
+                            <div class="blog-img">
+                                <img src="{% static 'img/pic4.jpg' %}" class="img-fluid w-100 mb-3" alt="Image">
+                                <img src="{% static 'img/pic5.jpg' %}" class="img-fluid w-100 mb-3" alt="Image">
+                                <img src="{% static 'img/pic8.jpg' %}" class="img-fluid w-100 mb-3" alt="Image">
+                                <img src="{% static 'img/pic11.jpg' %}" class="img-fluid w-100 mb-3" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Blog End -->
+
+
+            <!-- Feature Start -->
+        <div class="container-fluid feature py-5">
+            <div class="container py-5">
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="sub-style">
+                        <h4 class="sub-title px-3 mb-0" style=" font-size:30px; font-family: Century Gothic;">Why Choose Us</h4>
+                    </div>
+                    <h1 class="display-3 mb-4" style=" font-size:40px; font-family: Century Gothic;  text-align: center;">Why Choose Us? Get Your Life Style Back</h1>
+                    <p class="mb-0" style=" font-size:20px; font-family: Century Gothic; text-align: center;">- Expert Care: Our team of physiotherapists brings a wealth of knowledge and experience to each session, ensuring you receive the highest quality of care.</p>
+ <p style=" font-size:20px; font-family: Century Gothic; text-align: center;">-Personalized Approach: We understand that every patient is unique, which is why we take the time to create customized treatment plans that address your specific needs.</p>
+ <p style=" font-size:20px; font-family: Century Gothic; text-align: center;">-Facilities and Equipment: Our clinic is equipped with state-of-the-art facilities and the latest therapeutic equipment to ensure optimal patient care and comfort. From modern treatment rooms to cutting-edge rehabilitation equipment, we have everything needed to facilitate your journey to recovery.</p>
+ <p style=" font-size:20px; font-family: Century Gothic; text-align: center;">-Compassionate Support: At DR Physio, we are not just here to treat your symptoms; we are here to support you on your path to wellness with empathy and understanding.
+</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature End -->
+<!-- Testimonial Start -->
+        <div class="container-fluid testimonial py-5 wow zoomInDown" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="section-title mb-5">
+                    <div class="sub-style">
+                        <h4 class="sub-title text-white px-3 mb-0">Testimonial</h4>
+                    </div>
+                    <h1 class="display-3 mb-4">What Clients are Say</h1>
+                </div>
+                <div class="testimonial-carousel owl-carousel">
+                    <div class="testimonial-item">
+                        <div class="testimonial-inner p-5">
+                            <div class="testimonial-inner-img mb-4">
+                                <img src="{% static 'img/prasanth.png' %}" class="img-fluid rounded-circle" alt="">
+                            </div>
+                            <p class="text-white fs-7">Very well appreciated initiative, international standard physical therapy clinic, really liked it, very well equipped and highly experienced staffs. HOD of the clinic is a senior physiotherapist with more than 17 years of experience , every aspect it's a wonderful clinic
+                            </p>
+                            <div class="text-center">
+                                <h5 class="mb-2">Prasanth</h5>
+                                <p class="mb-2 text-white-50">Kerala, INDIA</p>
+                                <div class="d-flex justify-content-center">
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-inner p-5">
+                            <div class="testimonial-inner-img mb-4">
+                                <img src="{% static 'img/sanoj.png' %}" class="img-fluid rounded-circle" alt="">
+                            </div>
+                            <p class="text-white fs-7">Mr. Manjesh is the best physiotherapist I can recommend, provided exceptional care for my father with empathy and patience.
+
+His professional and dedicated approach ensured effective, gentle, and tailored therapy. His attention to detail and commitment to quality care made a significant difference in my father's overall experience.
+1
+
+                            </p>
+                            <div class="text-center">
+                                <h5 class="mb-2">Sanoj</h5>
+                                <p class="mb-2 text-white-50">New York, USA</p>
+                                <div class="d-flex justify-content-center">
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-inner p-5">
+                            <div class="testimonial-inner-img mb-4">
+                                <img src="{% static 'img/sanija.png' %}" class="img-fluid rounded-circle" alt="">
+                            </div>
+                            <p class="text-white fs-7">My father took Manjesh's physiotherapy service . Throughout this period, the attention and support received was excellent.
+
+A special appreciation goes to Manjesh for making my father as independent as possible. He goes the extra mile to ensure that he correctly understands the issue and provide scientific and latest solution, which will help in the long term.
+
+I highly recommend Manjesh for his physiotherapy services.
+                            </p>
+                            <div class="text-center">
+                                <h5 class="mb-2">Sanija</h5>
+                                <p class="mb-2 text-white-50">New York, USA</p>
+                                <div class="d-flex justify-content-center">
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-inner p-5">
+                            <div class="testimonial-inner-img mb-4">
+                                <img src="{% static 'img/jackson.png' %}" class="img-fluid rounded-circle" alt="">
+                            </div>
+                            <p class="text-white fs-7" style="font-family: 'Century Gothic'; font-size: 20px; text-align: left;">One of best physiotherapist . Highly recommend to meet Mr Manjesh. Whoever goes here , and you will be satisfied
+                            </p>
+                            <div class="text-center">
+                                <h5 class="mb-2" style="font-family: 'Century Gothic'; font-size: 20px; text-align: centre;">Jackson</h5>
+                                <p class="mb-2 text-white-50" style="font-family: 'Century Gothic'; font-size: 20px; text-align: left;">Abudhabi,UAE</p>
+                                <div class="d-flex justify-content-center">
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                    <i class="fas fa-star text-secondary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+            <!-- Book Appointment Start -->
+        <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
+                        <div class="section-title text-start">
+                            <h4 class="sub-title pe-3 mb-0" style="font-family: 'Century Gothic'; font-size: 36px; text-align: center;">Solutions To Your Pain</h4>
+                            <h1 class="display-4 mb-4" style="font-family: 'Century Gothic'; font-size: 40px; text-align: left;">Best Quality Services With Minimal Pain Rate</h1>
+                            <p class="mb-4" style="font-family: 'Century Gothic'; font-size: 20px; text-align: left;">Physiotherapy services aiming for minimal pain involve personalized treatment plans, manual therapy techniques, targeted exercises, and electrotherapy modalities to address individual needs and goals. These approaches focus on alleviating pain, improving mobility, and enhancing overall function with a focus on patient comfort and minimizing discomfort. </p>
+                            <div class="row g-4">
+                                <div class="col-sm-6">
+                                    <div class="d-flex flex-column h-100">
+                                        <div class="text-start mb-4">
+                                           <a href="{% url 'appointmentinsert' %}" class="btn btn-primary rounded-pill text-white py-3 px-5">Book Appointment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div>
+            {% endblock %}
+        <!-- Book Appointment End -->
+
+
+            <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4" style="font-family: 'Century Gothic'; font-size: 25px; text-align: left;">DR PHYSIO</h4>
+                            <p style="font-family: 'Century Gothic'; font-size: 25px; text-align: justify;">"Physiotherapy" can be described as "a healthcare practice focused on restoring and optimizing physical function through manual therapy, exercise, and education, helping individuals recover from injuries, manage pain, and improve mobility.".
+                            </p>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-white me-2"></i>
+                                <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white" style="font-family: 'Century Gothic'; font-size: 25px; text-align: left;">Quick Links</h4>
+                            <a href="" style="font-family: 'Century Gothic'; font-size: 25px;"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="" style="font-family: 'Century Gothic'; font-size: 25px;"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                            <a href="" style="font-family: 'Century Gothic'; font-size: 25px;"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                            <a href="" style="font-family: 'Century Gothic'; font-size: 25px;"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+                            <a href="" style="font-family: 'Century Gothic'; font-size: 25px;"><i class="fas fa-angle-right me-2"></i> Our Blog & News</a>
+                            <a href="" style="font-family: 'Century Gothic'; font-size: 25px;"><i class="fas fa-angle-right me-2"></i> Our Team</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white" style="font-family: 'Century Gothic'; font-size: 25px; text-align: left;">DR PHYSIO Services</h4>
+                            <a href="" style="font-family: 'Century Gothic'; font-size: 25px;"><i class="fas fa-angle-right me-2"></i> All Services</a>
+                            <a href="" style="font-family: 'Century Gothic'; font-size: 25px;"><i class="fas fa-angle-right me-2"></i> Physiotherapy</a>
+                            <a href="" style="font-family: 'Century Gothic'; font-size: 25px;"><i class="fas fa-angle-right me-2"></i> Manual Therapy</a>
+                            <a href="" style="font-family: 'Century Gothic'; font-size: 25px;"><i class="fas fa-angle-right me-2"></i> Rehabilitation</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white" style="font-family: 'Century Gothic'; font-size: 25px; text-align: left;">Contact Info</h4>
+                            <a href="" style="font-family: 'Century Gothic'; font-size: 25px;"><i class="fa fa-map-marker-alt me-2"></i> Pulickal Building,6th Mile
+                            Panackapalam,Erattupetta</a>
+                            <a href="" style="font-family: 'Century Gothic'; font-size: 25px;"><i class="fas fa-phone me-2"></i> +91 88912609999</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-white">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+        <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+        <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+
+        <!-- Template Javascript -->
+        <script src="{% static 'js/main.js'%}"></script>
+
+    </body>
+
+</html>

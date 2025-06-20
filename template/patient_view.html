@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+{% for x in dataset%}
+    {{x.name}}<br>
+    {{x.age}}<br>
+    {{x.gender}}<br>
+    {{x.dob}}<br>
+    {{x.mob}}<br>
+    {{x.occupation}}<br>
+    {{x.regno}}<br>
+    {{x.regdate}}<br>
+    {{x.Docname}}<br>
+    <a href="{% url 'patientedit' x.id%}">edit</a>
+    <a href="{%url 'patientdel' x.id%}">del</a>
+
+ {% endfor %}
+    <br>
+</div>
+</body>
+</html>
+

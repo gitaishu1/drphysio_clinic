@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {%csrf_token%}
+    <table border="1" width="200">
+    {{ form.as_table}}
+  </table>
+  <input type="submit" value="insert">
+</form>
+<div>
+  <table>
+    <tr>
+      <td>
+        <strong>PATIENT NAME:</strong><strong>{{patientname}}</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        explanationofcondition
+      </td>
+      <td>
+        prognosis
+      </td>
+      <td>
+        selfmanagement
+      </td>
+      <td>
+        Actions
+      </td>
+      {% for x in dataset %}
+      <tr>
+    <td>
+      {{x.explanationofcondition}}
+    </td>
+    <td>
+      {{x.prognosis}}
+    </td>
+    <td>
+      {{x.selfmanagement}}
+    </td>
+    <td>
+      <a href="{% url 'PLANCAREedit' x.id%}">edit</a>
+    </td>
+    <td>
+      <a href="{% url 'PLANCAREdel' x.id%}">del</a>
+    </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+</body>
+</html>

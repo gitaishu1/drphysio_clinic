@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post">
+    {%csrf_token%}
+    <table class="table table-striped">
+        <tr>
+            <th colspan="2">
+                FUNCTIONAL LIMITATIONS DETAILS
+            </th>
+        </tr>
+    {{ form.as_table}}
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="insert">
+            </td>
+        </tr>
+  </table>
+</form>
+<div>
+  <table class="table table-striped">
+    <tr>
+      <td>
+        <strong>PATIENT NAME:</strong><strong>{{patientname}}</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        assessmentofcondition
+      </td>
+      <td>
+        activitiesofdailyiving
+      </td>
+        <td>
+            Actions
+        </td>
+        {% for x in dataset %}
+        <tr>
+      <td>
+          {{x.assessmentofcondition}}
+      </td>
+      <td>
+          {{x.activitiesofdailyiving}}
+      </td>
+      <td>
+          <a href="{% url 'FUNLIMedit' x.id%}">edit</a>
+      </td>
+      <td>
+          <a href="{% url 'FUNLIMdel' x.id%}">del</a>
+      </td>
+    </tr>
+      {% endfor %}
+  </table>
+</div>
+
+</body>
+</html>

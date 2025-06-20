@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+{% for x in dataset %}
+    {{x.name}}
+    {{x.complaint}}<br>
+    <a href="{%url 'complaintedit' x.id%}">edit</a>
+    <a href="{%url 'complaintdel' x.id%}">del</a>
+
+{% endfor %}
+</div>
+</body>
+</html>

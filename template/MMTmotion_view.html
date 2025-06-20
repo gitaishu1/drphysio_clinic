@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    Enter patient no:<input type="text" name="patientid"><br>
+
+{% csrf_token %}
+</form>
+<div id="table-container">
+
+</div>
+
+
+<script>
+document.querySelector("[name='patientid']").addEventListener("input", function()
+ {
+    var selectedValue = this.value;
+    console.log(selectedValue);
+    fetch(`/get_patient/?selected_value=` + selectedValue)
+    .then(response => response.json())
+
+    .then(data => {
+
+      // Build HTML table using received data
+
+      var html = '<table border="1">';
+      html += '<tr><td> Patient </td><td> age </td><td> Gender </td><td> Mobile </td><td>Actions</td></tr>'
+
+      data.data.forEach(item => {
+        html += '<tr><td> ' + item.name +  '</td><td>' + item.age +  '</td><td>' + item.gender + '</td> <td> ' + item.mobile + ' </td><td><a href="MMTmotiondetails/' + item.id + '">view MMTmotiondetails</a></td></tr>';
+
+      });
+      html += '</table>';
+      document.getElementById('table-container').innerHTML = html;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+
+
+
+    });
+
+});
+
+</script>
+</body>
+</html>
+
+

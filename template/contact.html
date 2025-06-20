@@ -1,0 +1,94 @@
+{% extends 'managerheader.html' %}
+{% block content %}
+<div class="container-fluid contact py-5">
+            <div class="container py-5">
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="sub-style mb-4">
+                        <h4 class="sub-title text-white px-3 mb-0" style="font-family: 'Century Gothic'; font-size: 20px; text-align: left;">Contact Us</h4>
+                    </div>
+                    <p class="mb-0 text-black-50" style="font-family: 'Century Gothic'; font-size: 20px; text-align: left;">Contact us today to schedule your first appointment. Let us help you revive your body, mind, and spirit at DR PHYSIO.
+At DR PHYSIO, your health and well-being are our top priorities. Let us help you get back to doing the things you love, pain-free.
+</p>
+                </div>
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-5 col-xl-5 contact-form wow fadeInLeft" data-wow-delay="0.1s">
+                        <h2 class="display-5 text-white mb-2" style="font-family: 'Century Gothic'; font-size: 20px; text-align: left;">Get in Touch</h2>
+                        <p class="mb-4 text-white">
+                        <form method="POST" action="">
+                               {% csrf_token %}
+                               <div class="row gy-3 gx-4">
+                                   <div class="col-xl-6">
+                                       <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                   </div>
+                                   <div class="col-xl-6">
+                                       <input type="email" name="Email" class="form-control" placeholder="Email" required>
+                                   </div>
+                                    <div class="col-xl-6">
+                                       <input type="tel" name="phone" class="form-control" placeholder="Phone" required>
+                                    </div>
+                                   <div class="col-xl-6">
+                                       <select name="Gender" class="form-select" required>
+                                           <option value="">Select Gender</option>
+                                           <option value="Male">Male</option>
+                                           <option value="Female">Female</option>
+                                           <option value="Others">Others</option>
+                                       </select>
+                                   </div>
+                                   <div class="col-xl-6">
+                                       <input type="date" name="Dob" class="form-control" required>
+                                   </div>
+                                   <div class="col-xl-6">
+                                       <select name="Department" class="form-select" required>
+                                           <option value="">Select Department</option>
+                                           <option value="Consultation">Consultation</option>
+                                           <option value="Follow-up">Follow-up</option>
+                                       </select>
+                                   </div>
+                                   <div class="col-12">
+                                        <textarea name="Message" class="form-control" placeholder="Write Comments"></textarea>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                               </div>
+                           </form>
+                    </div>
+                    <div class="col-lg-2 col-xl-2 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="bg-transparent rounded">
+                            <div class="d-flex flex-column align-items-center text-center mb-4">
+                                <div class="bg-white d-flex align-items-center justify-content-center mb-3" style="width: 90px; height: 90px; border-radius: 50px;"><i class="fa fa-map-marker-alt fa-2x text-primary"></i></div>
+                                <h4 class="text-dark" style="font-family: 'Century Gothic'; font-size: 20px; text-align: left;">Addresses</h4>
+                                <p class="mb-0 text-white" style="font-family: 'Century Gothic'; font-size: 16px; text-align: left;">Pulickal Building,6th Mile Panackapalam,Erattupetta
+                                    Pin-686579,Kottayam</p>
+
+                            </div>
+                            <div class="d-flex flex-column align-items-center text-center mb-4">
+                                <div class="bg-white d-flex align-items-center justify-content-center mb-3" style="width: 90px; height: 90px; border-radius: 50px;"><i class="fa fa-phone-alt fa-2x text-primary"></i></div>
+                                <h4 class="text-dark" style="font-family: 'Century Gothic'; font-size: 20px; text-align: left;">Mobile</h4>
+                                <p class="mb-0 text-white">+91 8891260999</p>
+                            </div>
+
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <div class="bg-white d-flex align-items-center justify-content-center mb-3" style="width: 90px; height: 90px; border-radius: 50px;"><i class="fa fa-envelope-open fa-2x text-primary"></i></div>
+                                <h4 class="text-dark" style="font-family: 'Century Gothic'; font-size: 20px; text-align: left;">Email</h4>
+                                <p class="mb-0 text-white" style="font-family: 'Century Gothic'; font-size: 20px; text-align: left;">drphysio5272@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                        <div class="d-flex justify-content-center mb-4">
+                            <a class="btn btn-lg-square btn-light rounded-circle mx-2" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-lg-square btn-light rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-lg-square btn-light rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-lg-square btn-light rounded-circle mx-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="rounded h-100">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4839.204006618013!2d76.76139767583099!3d9.696960578174128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07cb00525dec85%3A0xbafd5e9998869d81!2sDR%20PHYSIO%20-%20Advanced%20Physiotherapy%20Clinic!5e1!3m2!1sen!2sin!4v1747308985523!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+{% endblock %}

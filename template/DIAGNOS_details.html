@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post">
+    {%csrf_token%}
+   <table class="table table-striped">
+     <tr>
+       <td colspan="2">
+         DIAGNOS
+       </td>
+     </tr>
+    {{ form.as_table}}
+  </table>
+  <input type="submit" value="insert">
+</form>
+<div>
+  <table class="table table-striped">
+    <tr>
+      <td>
+        <strong>PATIENT NAME:</strong><strong>{{patientname}}</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Xrays
+      </td>
+      <td>
+        MRI
+      </td>
+      <td>
+        CT
+      </td>
+      <td>
+        lab
+      </td>
+      <td>
+        Action 1
+      </td>
+      {% for x in dataset %}
+      <tr>
+    <td>
+      {{x.Xrays}}
+    </td>
+    <td>
+      {{x.MRI}}
+    </td>
+    <td>
+      {{x.CT}}
+    </td>
+    <td>
+      {{x.lab}}
+    </td>
+    <td>
+      <a href="{% url 'DIAGNOSedit' x.id%}">edit</a>
+    </td>
+    <td>
+      <a href="{% url 'DIAGNOSdel' x.id%}">del</a>
+    </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+</body>
+</html>
